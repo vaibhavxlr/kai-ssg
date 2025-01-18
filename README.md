@@ -1,0 +1,2 @@
+# kai-ssg
+Simple SSG
