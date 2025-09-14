@@ -2,27 +2,25 @@ package ssg
 
 import "html/template"
 
-type SiteMeta struct {
+type AboutPage struct {
 	SiteTitle string
 	Author    string
 	Year      int
-	BlogIntro string
+	Content   template.HTML
 }
 
 type Post struct {
 	Title   string
 	Date    string
-	Year    int
 	Slug    string
+	Year    int
 	Content template.HTML
 }
 
-type AboutPage struct {
-	SiteMeta
-	Content template.HTML
-}
-
-type BlogIndex struct {
-	SiteMeta
+type BlogPage struct {
+	SiteTitle   string
+	BlogIntro   string
+	Author      string
+	Year        int
 	PostsByYear map[int][]Post
 }
